@@ -9,20 +9,17 @@ print "<table border='1' width='80%' height='60%'>";
 
 print "<tr><th>Anr</th><th>Bezeichnung</th><th>Preis</th></tr>";
 
-foreach($artikeldaten as $artikel)
-{
+foreach ($artikeldaten as $artikel) {
     print "<tr>";
-    
-    foreach($artikel as $key => $value)
-    {
-        if ($key != "Beschreibung")
-        {
+
+    foreach ($artikel as $key => $value) {
+        if ($key != "Beschreibung") {
             print "<td>$value</td>";
         }
     }
     // eine Zelle im Hyperlink
     print "<td>";
-    print "<a href='http://localhost/php_fiae/artikel/artikelWahl.php?wahl=".$artikel["anr"]."'>Details</a>";
+    print "<a href='http://localhost/php_fiae/artikel/artikelWahl.php?wahl=" . $artikel["anr"] . "'>Details</a>";
     print "</tr>";
 }
 
