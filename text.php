@@ -17,36 +17,31 @@ $text2 = "Welt";
 print $zahl;
 
 // Berechnung in Ausgaben
-print "Ergebnis = " .($zahl1 * $zahl2)."<br>";
+print "Ergebnis = " . ($zahl1 * $zahl2) . "<br>";
 print "Erste Zahl ist $zahl1 <br>";
 print "Zweite Zahl ist $zahl2 <br>";
 
 // Verbinden von zwei Texten
-print "DER Satz in der Programmierung = " .$text1.$text2."<br>";
+print "DER Satz in der Programmierung = " . $text1 . $text2 . "<br>";
 
 //-----
 print "<hr/>";
-if($zahl2 == 3)
-{
-	print "Die Variable zahl2 hat den Wert 3<br/>";
+if ($zahl2 == 3) {
+    print "Die Variable zahl2 hat den Wert 3<br/>";
 }
 
-while($zahl2 > 0)
-{
-	print $zahl2."<br/>";
-	$zahl2--;
+while ($zahl2 > 0) {
+    print $zahl2 . "<br/>";
+    $zahl2--;
 }
 
-do
-{
-	print $zahl2."<br/>";
-	$zahl2++;
-}
-while($zahl2 < 5);
+do {
+    print $zahl2 . "<br/>";
+    $zahl2++;
+} while ($zahl2 < 5);
 
-for( $i = 0; $i < 10; $i++)
-{
-	print "Immer noch Montag <br/>";
+for ($i = 0; $i < 10; $i++) {
+    print "Immer noch Montag <br/>";
 }
 
 //-----
@@ -54,11 +49,10 @@ $umsatz[0] = 1234;
 $umsatz[1] = 345.7;
 $umsatz[2] = 12456.99;  //kein Ende vorgegeben
 
-print"<hr/>";
+print "<hr/>";
 print "<h5>Umsatzzahlen:</h5>";
-for($i = 0; $i < 3; $i++)
-{
-    print $umsatz[$i]."<br/>";
+for ($i = 0; $i < 3; $i++) {
+    print $umsatz[$i] . "<br/>";
 }
 
 // ein Array für die Speicherung eines Datensatzes
@@ -68,7 +62,7 @@ $kunde["Umsatz"] = 999.99;
 
 print "<hr/>";
 print "<h5>Der Kunde</h5>";
-foreach($kunde as $key => $value)   // Achtung: NEU
+foreach ($kunde as $key => $value)   // Achtung: NEU
 {
     print "$key: $value<br/>";
 }
@@ -87,10 +81,8 @@ $ticketpool[1] = array("tnr" => "T2", "Band" => "Band 2");
 
 print "<hr/>";
 print "<h5>Die Tickets</h5>";
-foreach($ticketpool as $ticket)
-{
-    foreach($ticket as $key => $value)
-    {
+foreach ($ticketpool as $ticket) {
+    foreach ($ticket as $key => $value) {
         print "$key: $value<br/>";
     }
 }
