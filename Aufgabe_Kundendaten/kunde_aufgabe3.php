@@ -2,6 +2,8 @@
 
 require("kundendaten.php");
 
+
+// muss dann in Adressleiste als grenze=ZAHL eingegeben werden
 $grenze = $_REQUEST["grenze"];
 
 
