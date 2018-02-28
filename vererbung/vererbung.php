@@ -27,4 +27,12 @@ foreach($liste as $buch)
     print "Anzahl der Bücher: " .Buch::getAnzahl(). "<br/>";
 }
 
+//---
+print "<hr/>";
+
+$tb = new Taschenbuch("Lustiges Taschenbuch", 6.50);
+print "Titel des Buches: " .$tb->getTitel()."<br/>";
+print "Preis des Buches: " .$tb->getPreis()."<br/>";
+print "Nummer des Buches: " .$tb->getNummer()."<br/>";
+
 ?>
