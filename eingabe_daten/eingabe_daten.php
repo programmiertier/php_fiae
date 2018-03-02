@@ -33,7 +33,8 @@ if ($datei == false) {
 }
 
 // 2. Zeile zusammensetzen, die in die Datei geschrieben werden soll
-                    // Zeilenumbruch \r\n, weil Windows, eben Windows ist
+                    // \n für Zeilenumbruch in Windows-Systemen
+                    // \n\r in UNIX! Apache ist UNIX, daher funktioniert das nur so!
 $zeile = "$bez | $preis\r\n";
 
 // 3. Schreiben der Zeile in Datei
