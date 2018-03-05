@@ -13,8 +13,18 @@ $farbe2 = imagecolorallocate($bild, 0,0,0);
 
 imagefilledrectangle($bild, 0,0,100,30,$farbe2);
 
+function generateRandomString($length = 5) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+    $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+    }
+
 $textsize = 4;
-ImageString($bild, $textsize, 0, 0, "Captcha", $farbe1);
+ImageString($bild, $textsize, 0, 0, generateRandomString(), $farbe1);
 
 //Ausgabe bild
 // imagepng($bild);
@@ -38,7 +48,7 @@ imagepng($bild, $target);
         <br/>
         <input type="text" name="mail" /> eMail
         <br/>
-        <?php print "<img src='$target'/>;" ?>
+        <?php print "<img src='$target'/>"; ?>
         <br/>
         <input type="submit" value="absenden" />
     </form>
